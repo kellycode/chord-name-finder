@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- 
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/.
+   -
+   - (c) 2018 Renee Waverly Sonntag
+   -->
+<html>
+   <head>
+      <script src="chorddefs.js"></script>
+      <title>chord-name-finder</title>
+<style>
+body { font-size: 1.25em; font-family: sans-serif; }
+body div { display: inline-block; }
+input[type=checkbox] { position: absolute; left: -1000px; top: -1000px; }
+input[type=checkbox] ~ label { display: inline-block; width: 55px; height: 200px; background: #fefefe; border: 1px solid silver; box-shadow: inset 0 -10px 0 0 silver; border-radius: 0px 0px 4px 4px; box-sizing: border-box; }
+.flats { position: relative; height: 200px; }
+.flats input[type=checkbox] ~ label { width: 40px; background: #555; border: 1px solid #333; box-shadow: inset 0 -10px 0 0 #333; height:100px; position: absolute; margin-left: -20px; top: 0px; }
+.flats input[type=checkbox]:checked ~ label { background: #999; border: 1px solid #555; box-shadow: inset 0 -5px 0 0 #555; }
+input[type=checkbox]:checked ~ label { background: #ddd; border: 1px solid gray; box-shadow: inset 0 -5px 0 0 gray; }
+</style>
+   </head>
+   <body>
+      <p>Press on a key to toggle it to the downward position.  Any chords that match the current selection will be displayed below the keyboard.</p>
+      <div>
+         <input type="checkbox" id="F_key_1"></input>
+         <label for="F_key_1"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Gb_key_1"></input>
+         <label for="Gb_key_1"></label>
+      </div><div>
+         <input type="checkbox" id="G_key_1"></input>
+         <label for="G_key_1"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Ab_key_1"></input>
+         <label for="Ab_key_1"></label>
+      </div><div>
+         <input type="checkbox" id="A_key_1"></input>
+         <label for="A_key_1"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Bb_key_1"></input>
+         <label for="Bb_key_1"></label>
+      </div><div>
+         <input type="checkbox" id="B_key_1"></input>
+         <label for="B_key_1"></label>
+      </div><div>
+         <input type="checkbox" id="C_key_1"></input>
+         <label for="C_key_1"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Db_key_1"></input>
+         <label for="Db_key_1"></label>
+      </div><div>
+         <input type="checkbox" id="D_key_1"></input>
+         <label for="D_key_1"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Eb_key_1"></input>
+         <label for="Eb_key_1"></label>
+      </div><div>
+         <input type="checkbox" id="E_key_1"></input>
+         <label for="E_key_1"></label>
+      </div><!-- Octave --><div>
+         <input type="checkbox" id="F_key_2"></input>
+         <label for="F_key_2"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Gb_key_2"></input>
+         <label for="Gb_key_2"></label>
+      </div><div>
+         <input type="checkbox" id="G_key_2"></input>
+         <label for="G_key_2"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Ab_key_2"></input>
+         <label for="Ab_key_2"></label>
+      </div><div>
+         <input type="checkbox" id="A_key_2"></input>
+         <label for="A_key_2"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Bb_key_2"></input>
+         <label for="Bb_key_2"></label>
+      </div><div>
+         <input type="checkbox" id="B_key_2"></input>
+         <label for="B_key_2"></label>
+      </div><div>
+         <input type="checkbox" id="C_key_2"></input>
+         <label for="C_key_2"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Db_key_2"></input>
+         <label for="Db_key_2"></label>
+      </div><div>
+         <input type="checkbox" id="D_key_2"></input>
+         <label for="D_key_2"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Eb_key_2"></input>
+         <label for="Eb_key_2"></label>
+      </div><div>
+         <input type="checkbox" id="E_key_2"></input>
+         <label for="E_key_2"></label>
+      </div><!-- Octave --><div>
+         <input type="checkbox" id="F_key_3"></input>
+         <label for="F_key_3"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Gb_key_3"></input>
+         <label for="Gb_key_3"></label>
+      </div><div>
+         <input type="checkbox" id="G_key_3"></input>
+         <label for="G_key_3"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Ab_key_3"></input>
+         <label for="Ab_key_3"></label>
+      </div><div>
+         <input type="checkbox" id="A_key_3"></input>
+         <label for="A_key_3"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Bb_key_3"></input>
+         <label for="Bb_key_3"></label>
+      </div><div>
+         <input type="checkbox" id="B_key_3"></input>
+         <label for="B_key_3"></label>
+      </div><div>
+         <input type="checkbox" id="C_key_3"></input>
+         <label for="C_key_3"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Db_key_3"></input>
+         <label for="Db_key_3"></label>
+      </div><div>
+         <input type="checkbox" id="D_key_3"></input>
+         <label for="D_key_3"></label>
+      </div><div class="flats">
+         <input type="checkbox" id="Eb_key_3"></input>
+         <label for="Eb_key_3"></label>
+      </div><div>
+         <input type="checkbox" id="E_key_3"></input>
+         <label for="E_key_3"></label>
+      </div>
+   <script>
+var inputlist = document.getElementsByTagName("input")
+function updateChords() {
+   var notes = []
+   for (var i = 0; i < inputlist.length; i++) {
+      if (inputlist[i].checked) notes.push(inputlist[i].id.split('_')[0])
+   }
+   for (var i = 0; i < notes.length - 1; i++) {
+      for (var j = i+1; j < notes.length; j++) {
+         if (notes[i] == notes[j]) notes.splice(j,1)
+      }
+   }
+   chordlist.innerText = reverseChord(notes).join('\n')
+}
+[].forEach.call(document.querySelectorAll("input"), function(input) {
+  input.addEventListener("change", updateChords, false)
+  input.addEventListener("blur", updateChords, false)
+})
+   </script>
+      <h1 id="chordlist"></h1>
+   </body>
+</html>
